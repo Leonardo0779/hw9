@@ -1,66 +1,40 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.print("task1\n");
-        int[] arr = new int[]{1, 2, 3};
-        double[] arr1 = {1.57, 7.654, 9.986};
-        int[] arr2 = new int[12];
+        System.out.println("task1");
+        int[] salary = {1500, 2500, 2850, 3200, 3500};
+        int sumSalary = 0;
+        for (int j : salary) {
+            sumSalary += j;
+        }
+        System.out.printf("Сумма трат за месяц составила %s рублей\n", sumSalary);
 
-        System.out.print("task2\n");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i]);
-            if (i != arr.length - 1) {
-                System.out.print(" , ");
+        System.out.println("task 2");
+        int[] rangeSalary = {1500, 2500, 2850, 3200, 3500};
+        int salaryMax = rangeSalary[0];
+        int salaryMin = rangeSalary[0];
+        for (int i : rangeSalary) {
+            if (i > salaryMax) {
+                salaryMax = i;
+            }
+            if (i < salaryMin) {
+                salaryMin = i;
             }
         }
-        System.out.println();
-
-        for (int i = 0; i < arr1.length; i++) {
-            System.out.print(arr1[i]);
-            if (i != arr1.length - 1) {
-                System.out.print(", ");
-            }
+        System.out.printf("Минимальная сумма трат за неделю составила %s рублей. Максимальная сумма трат за " +
+                "неделю составила %s рублей\n", salaryMin, salaryMax);
+        System.out.println("task 3");
+        int[] salaryNew = {1500, 2500, 2850, 3200, 3500};
+        int sumSalaryNew = 0;
+        for (int i : salaryNew) {
+            sumSalaryNew += i;
         }
-        System.out.println();
+        int weeklySalary = sumSalaryNew / salaryNew.length;
+        System.out.printf("Средняя сумма трат за месяц составила %s рублей\n", weeklySalary);
 
-        for (int i = 0; i < arr2.length; i++) {
-            System.out.print(arr2[i]);
-            if (i != arr2.length - 1) {
-                System.out.print(" , ");
-            }
-        }
-        System.out.println();
-
-        System.out.print("task3\n");
-        for (int i = arr.length - 1; i >= 0; i--) {
-            System.out.print(arr[i]);
-            if (i != 0) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println();
-
-        for (int i = arr1.length - 1; i >= 0; i--) {
-            System.out.print(arr1[i]);
-            if (i != 0) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println();
-        for (int i = arr2.length - 1; i >= 0; i--) {
-            System.out.print(arr2[i]);
-            if (i != 0) {
-                System.out.print(", ");
-
-            }
-        }
-        System.out.println();
-
-        System.out.print("task4\n");
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % 2 != 0) {
-                arr[i]++;
-            }
-            System.out.print(arr[i] + "");
+        System.out.println("task 4");
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length-1; i >=0 ; i--) {
+            System.out.print(reverseFullName[i]);
         }
     }
 }

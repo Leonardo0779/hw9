@@ -3,8 +3,8 @@ public class Main {
         System.out.println("task1");
         int[] salary = {1500, 2500, 2850, 3200, 3500};
         int sumSalary = 0;
-        for (int j : salary) {
-            sumSalary += j;
+        for (int i : salary) {
+            sumSalary += i;
         }
         System.out.printf("Сумма трат за месяц составила %s рублей\n", sumSalary);
 
